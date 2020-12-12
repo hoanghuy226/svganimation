@@ -7,11 +7,15 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "dev": "watchman watch-del-all && react-native start --reset-cache",
+    "clean": "rm -rf node_modules/ && rm -rf ios/Pods/",
+    "postinstall": "npx pod-install ios",
     "lint": "eslint ."
   },
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-reanimated": "2.0.0-alpha.4",
     "react-native-svg": "^12.1.0"
   },
   "devDependencies": {
