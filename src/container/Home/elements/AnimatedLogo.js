@@ -17,20 +17,20 @@ const height = (width * vHeight) / vWidth;
 const AnimatedEllipse = Animated.createAnimatedComponent(Ellipse);
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 
-const AnimatedLogo = ({progress: {progressRaw}}) => {
+const AnimatedLogo = ({progress}) => {
   const part1 = useDerivedValue(() =>
     Easing.inOut(Easing.ease)(
-      interpolate(progressRaw.value, [0, 0.75], [0, 1], Extrapolate.CLAMP),
+      interpolate(progress.value, [0, 0.75], [0, 1], Extrapolate.CLAMP),
     ),
   );
   const part2 = useDerivedValue(() =>
     Easing.inOut(Easing.ease)(
-      interpolate(progressRaw.value, [0.75, 1], [0, 1], Extrapolate.CLAMP),
+      interpolate(progress.value, [0.75, 1], [0, 1], Extrapolate.CLAMP),
     ),
   );
 
   const [length, setLength] = useState(0);
-  const ref = useRef < typeof AnimatedEllipse > null;
+  const ref = useRef(null);
   const circle = useAnimatedProps(() => ({
     r: part1.value * 30,
     fillOpacity: part1.value,

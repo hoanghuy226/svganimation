@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import StrokeAnimation from '../elements/StrokeAnimation';
 
 class Home extends Component {
@@ -9,7 +9,7 @@ class Home extends Component {
 
   render() {
     return (
-      <View style={{flex: 1, backgroundColor: 'gray'}}>
+      <View style={styles.container}>
         <StrokeAnimation />
       </View>
     );
@@ -17,3 +17,9 @@ class Home extends Component {
 }
 
 export default Home;
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'rgba(255,255,255,0.4)',
+  },
+});

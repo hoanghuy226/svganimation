@@ -13,7 +13,7 @@ const colors = ['#FFC27A', '#7EDAB9', '#45A6E5', '#FE8777'];
 const AnimatedStroke = ({d, progress}: AnimatedStrokeProps) => {
   const stroke = colors[Math.round(Math.random() * (colors.length - 1))];
   const [length, setLength] = useState(0);
-  const ref = useRef < typeof AnimatedPath > null;
+  const ref = useRef(null);
   const animatedBGProps = useAnimatedProps(() => ({
     strokeDashoffset:
       length - length * Easing.bezier(0.61, 1, 0.88, 1)(progress.value),

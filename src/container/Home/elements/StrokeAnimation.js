@@ -39,7 +39,7 @@ function StrokeAnimation(props) {
 
   return (
     <View style={styles.layer}>
-      <Background />
+      {/* <Background /> */}
       <View style={styles.layer}>
         <AnimatedLogo progress={progress} />
       </View>
@@ -64,8 +64,8 @@ export default StrokeAnimation;
 
 const styles = StyleSheet.create({
   layer: {
-    ...StyleSheet.absoluteFillObject,
-    flex: 1,
+    // ...StyleSheet.absoluteFillObject,
+    // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
