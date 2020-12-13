@@ -53,6 +53,7 @@ const AnimatedLogo = ({progress}) => {
   const stroke1 = useAnimatedProps(strokeAnimation);
   const stroke2 = useAnimatedProps(strokeAnimation);
   const stroke3 = useAnimatedProps(strokeAnimation);
+
   const rotate1 = useAnimatedStyle(rotateAnimation(Math.PI / 6));
   const rotate2 = useAnimatedStyle(rotateAnimation(-Math.PI / 6));
   const rotate3 = useAnimatedStyle(rotateAnimation(Math.PI / 2));
